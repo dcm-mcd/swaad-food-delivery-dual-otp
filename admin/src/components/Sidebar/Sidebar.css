@@ -1,0 +1,81 @@
+/* Sidebar base */
+.sidebar {
+    inline-size: 18%;
+    min-block-size: 100vh;
+    border: 1.5px solid #A9A9A9;
+    border-block-start: 0;
+    background: linear-gradient(180deg, #fff8f6, #ffe5e0);
+    font-size: max(1vw, 12px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Options container */
+.sidebar-options {
+    padding-block-start: 50px;
+    padding-inline-start: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each option */
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #A9A9A9;
+    border-inline-end: 0;
+    padding: 10px 12px;
+    border-radius: 8px 0px 0px 8px; 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    position: relative;
+}
+
+/* Hover effect */
+.sidebar-option:hover {
+    background: #ffece7;
+    transform: translateX(5px);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Active state */
+.sidebar-option.active {
+    background-color: #fff0ed;
+    border-color: tomato;
+    font-weight: bold;
+    color: tomato;
+}
+
+/* Example: Add Emojis with pseudo-elements */
+.sidebar-option.home::before {
+    content: "🏠 ";
+}
+.sidebar-option.orders::before {
+    content: "🛒 ";
+}
+.sidebar-option.phone::before {
+    content: "📞 ";
+}
+.sidebar-option.otp::before {
+    content: "🔑 ";
+}
+.sidebar-option.profile::before {
+    content: "👤 ";
+}
+.sidebar-option.settings::before {
+    content: "⚙️ ";
+}
+
+/* Icons inside */
+.sidebar-option img {
+    inline-size: 20px;
+}
+
+/* Responsive – hide text */
+@media (max-width:900px) {
+    .sidebar-option p {
+        display: none;
+    }
+}

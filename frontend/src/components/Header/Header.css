@@ -1,0 +1,162 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 2px solid tomato;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #333;
+    background: linear-gradient(135deg, #fff8f6, #ffe8e4);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.order-item::before {
+    content: "🍔📦";
+    font-size: 22px;
+    position: absolute;
+    inset-block-start: -12px;
+    inset-inline-start: -12px;
+    background: white;
+    padding: 6px;
+    border-radius: 50%;
+    border: 2px solid tomato;
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-block-start: 30px;
+    margin-block-end: 5px;
+    position: relative;
+}
+
+.order-item-name::before {
+    content: "📝 ";
+    font-size: 14px;
+    margin-inline-end: 6px;
+}
+
+.order-item-address {
+    margin-block-end: 10px;
+    font-style: italic;
+    color: #555;
+    position: relative;
+}
+
+.order-item-address::before {
+    content: "📍 ";
+    font-size: 14px;
+    margin-inline-end: 4px;
+}
+
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    inline-size: max(10vw,120px);
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    outline:none;
+}
+
+.order-item select:hover {
+    background: #ffccba;
+    transition: 0.3s ease;
+}
+
+@media(max-width:1000px){
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+    }
+    .order-item select {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .order-item img {
+        inline-size: 40px;
+    }
+}
+
+/* ===== Admin Order Section ===== */
+.order-admin-container {
+  padding: 20px;
+}
+
+.order-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-block-end: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#fff,#f7f7f7);
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.order-card::after {
+  content: "📦";
+  position: absolute;
+  inset-block-start: -10px;
+  inset-inline-end: -10px;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.order-card img {
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 50%;
+  border: 2px solid tomato;
+}
+
+.order-details {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.order-details::before {
+  content: "🧾 Order Details:";
+  display: block;
+  font-weight: bold;
+  color: tomato;
+  margin-block-end: 6px;
+}
+
+.assign-section {
+  margin-block-start: 10px;
+  font-weight: bold;
+  position: relative;
+}
+
+.assign-section::before {
+  content: "👤 Assign:";
+  margin-inline-end: 8px;
+  color: #444;
+}
+
+.assign-section select {
+  inline-size: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.assign-section select:hover {
+  background: #e0ffe0;
+}

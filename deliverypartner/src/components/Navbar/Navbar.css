@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); /* 🍑 soft gradient */
+    border-block-end: 2px solid #ff6b6b; /* ❤️ highlight */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 100;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar .logo {
+    inline-size: max(12%, 90px);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🌀 fun hover effect */
+.navbar .logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+    content: "🍕"; /* playful hint */
+}
+
+.navbar .links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* underline magic ✨ */
+.navbar .links a::after {
+    content: "✨";
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-end: -6px;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+}
+
+/* Hover effect with emoji */
+.navbar .links a:hover {
+    color: #ff6b6b;
+}
+.navbar .links a:hover::after {
+    opacity: 1;
+    inset-block-end: -12px;
+}
+
+.navbar .profile {
+    inline-size: 42px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ff6b6b;
+    padding: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🥳 bounce effect on hover */
+.navbar .profile:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}

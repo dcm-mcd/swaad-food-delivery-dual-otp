@@ -1,0 +1,107 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 2px solid tomato;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #505050;
+    border-radius: 12px;
+    background: #fff5f4;
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.order-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(255, 99, 71, 0.3);
+}
+
+.order-item-food::before {
+    content: "🍔 ";
+}
+.order-item-name::before {
+    content: "👤 ";
+}
+.order-item-address::before {
+    content: "📍 ";
+}
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    inline-size: max(10vw, 120px);
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.order-item select:hover {
+    background: #ffdad3;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+    }
+    .order-item select {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .order-item img {
+        inline-size: 40px;
+    }
+}
+
+/* Admin Panel Styling */
+.order-admin-container {
+    padding: 20px;
+}
+.order-card {
+    display: flex;
+    gap: 20px;
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-block-end: 15px;
+    border-radius: 12px;
+    background: #fdfdfd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.order-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+.order-card img {
+    inline-size: 60px;
+    block-size: 60px;
+    border-radius: 50%;
+    border: 2px solid #ff6f61;
+}
+.order-details {
+    flex: 1;
+}
+.assign-section {
+    margin-block-start: 10px;
+}
+.assign-section::before {
+    content: "🚚 Assign to: ";
+    font-weight: 600;
+    color: #333;
+}
+.assign-section select {
+    inline-size: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+.assign-section select:hover {
+    border-color: #ff6f61;
+    background: #fff3f1;
+}

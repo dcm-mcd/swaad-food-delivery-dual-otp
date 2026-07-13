@@ -1,0 +1,175 @@
+
+.footer {
+    color: #d9d9d9;
+    background: linear-gradient(180deg, #2e2e2e, #1c1c1c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 60px 8vw 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* glowing orb effect */
+.footer::before {
+    content: "";
+    position: absolute;
+    inset-block-start: -50px;
+    inset-inline-start: -50px;
+    inline-size: 220px;
+    block-size: 220px;
+    background: radial-gradient(circle, rgba(255, 76, 36, 0.25), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+    from { transform: translateY(0px) scale(1); opacity: 0.6; }
+    to   { transform: translateY(20px) scale(1.1); opacity: 1; }
+}
+
+.footer-content {
+    inline-size: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 70px;
+    z-index: 1;
+}
+
+/* Sections */
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 18px;
+}
+
+/* Headings with emojis */
+.footer-content-left h2::before { content: "🏢 "; }
+.footer-content-center h2::before { content: "📚 "; }
+.footer-content-right h2::before { content: "📞 "; }
+
+.footer-content-left h2,
+.footer-content-center h2,
+.footer-content-right h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-content-left h2::after,
+.footer-content-center h2::after,
+.footer-content-right h2::after {
+    content: "";
+    display: block;
+    inline-size: 40px;
+    block-size: 3px;
+    background: linear-gradient(90deg, #ff4c24, #ff9966);
+    margin-block-start: 6px;
+    border-radius: 2px;
+}
+
+/* List items with icons */
+.footer-content-left ul li::before { content: "➡️ "; }
+.footer-content-center ul li::before { content: "✨ "; }
+.footer-content-right ul li::before { content: "📩 "; }
+
+.footer-content-left ul li,
+.footer-content-center ul li,
+.footer-content-right ul li {
+    margin-block-end: 10px;
+    list-style: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-content-left ul li:hover,
+.footer-content-center ul li:hover,
+.footer-content-right ul li:hover {
+    color: #ff9966;
+    transform: translateX(5px);
+}
+
+/* Social icons with emoji bounce effect */
+.footer-social-icons {
+    display: flex;
+    gap: 16px;
+    margin-block-start: 10px;
+}
+
+.footer-social-icons img {
+    inline-size: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(100%) brightness(0.9);
+    border-radius: 50%;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.2) rotate(12deg);
+    filter: grayscale(0%) brightness(1.1);
+    box-shadow: 0 0 14px rgba(255, 76, 36, 0.6);
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1.1) translateY(0); }
+    50% { transform: scale(1.15) translateY(-6px); }
+}
+
+/* Divider */
+.footer hr {
+    inline-size: 100%;
+    block-size: 2px;
+    margin: 20px 0;
+    border: none;
+    background: linear-gradient(90deg, #444, #ff4c24, #444);
+}
+
+/* Copyright with emoji */
+.footer-copyinset-inline-end::before {
+    content: "©️ ";
+}
+.footer-copyinset-inline-end::after {
+    content: " ❤️ All Rights Reserved";
+}
+.footer-copyright {
+    font-size: 14px;
+    color: #a9a9a9;
+    z-index: 1;
+    letter-spacing: 0.3px;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        align-items: center;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+    }
+
+    .footer hr {
+        margin: 10px 0;
+    }
+}

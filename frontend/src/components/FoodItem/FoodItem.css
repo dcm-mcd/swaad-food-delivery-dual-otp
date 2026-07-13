@@ -1,0 +1,106 @@
+
+.food-item {
+    inline-size: 100%;
+    margin: auto;
+    border-radius: 18px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background: linear-gradient(145deg, #fff9f4, #fdfdfd);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    animation: fadeIn 1s ease-in-out;
+    cursor: pointer;
+}
+
+.food-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0px 10px 25px rgba(255, 76, 36, 0.3);
+}
+
+.food-item-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+}
+
+.food-item-image {
+    inline-size: 100%;
+    border-radius: 18px 18px 0 0;
+    transition: transform 0.4s ease;
+}
+
+.food-item:hover .food-item-image {
+    transform: scale(1.08);
+}
+
+.food-item-img-container .add {
+    inline-size: 42px;
+    block-size: 42px;
+    position: absolute;
+    inset-block-end: 15px;
+    inset-inline-end: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4c24, #ff9966);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(255, 76, 36, 0.4);
+    transition: all 0.3s ease;
+}
+
+.food-item-img-container .add:hover {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0px 6px 16px rgba(255, 76, 36, 0.5);
+}
+
+.food-item-counter {
+    position: absolute;
+    inset-block-end: 15px;
+    inset-inline-end: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: #fff7f4;
+    box-shadow: 0 2px 8px rgba(255, 76, 36, 0.25);
+}
+
+.food-item-counter img {
+    inline-size: 28px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.15));
+}
+
+.food-item-info {
+    padding: 20px;
+}
+
+.food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 12px;
+}
+
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.food-item-name-rating img {
+    inline-size: 72px;
+}
+
+.food-item-desc {
+    color: #6a6a6a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.food-item-price {
+    color: #ff4c24;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 14px 0px;
+}

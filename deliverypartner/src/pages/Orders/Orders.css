@@ -1,0 +1,185 @@
+/* 🍔🥗 Orders.css – Super Creative & Emoji Styled */
+
+/* 🌮 Order Item Card */
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border: 2px dashed tomato; /* 🍅 playful border */
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 14px;
+  color: #333;
+  background: linear-gradient(135deg, #fffaf7, #ffecea); /* 🍨 creamy gradient */
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(255, 99, 71, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.order-item:hover {
+  transform: scale(1.03); /* 🪄 gentle lift */
+  box-shadow: 0 8px 18px rgba(255, 99, 71, 0.3);
+}
+
+/* 🥡 Food & Customer Name */
+.order-item-food::before {
+  content: "🍱 ";
+}
+.order-item-food {
+  font-weight: 600;
+  color: #222;
+}
+.order-item-name::before {
+  content: "👤 ";
+  font-size: 16px;
+}
+.order-item-name {
+  font-weight: 700;
+  margin-block-start: 20px;
+  margin-block-end: 5px;
+  color: #444;
+}
+
+/* 📍 Address */
+.order-item-address::before {
+  content: "📍 ";
+}
+.order-item-address {
+  margin-block-end: 10px;
+  color: #555;
+}
+
+/* 📞 Phone Number */
+.order-item-phone::before {
+  content: "📞 ";
+  font-weight: bold;
+  color: #222;
+}
+
+/* 🔑 OTP Input Section */
+.otp-verification {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-block-start: 10px;
+}
+.otp-verification::before {
+  content: "🔑 OTP Verification";
+  font-weight: 600;
+  margin-block-end: 6px;
+  color: #d84a38;
+}
+.otp-verification input {
+  padding: 8px;
+  border: 1.5px solid tomato;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.otp-verification input:focus {
+  border-color: #ff7043;
+  background: #fff6f4;
+}
+.otp-verification button {
+  padding: 10px;
+  background: tomato;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.otp-verification button:hover {
+  background: #e6392e;
+  transform: scale(1.05);
+}
+
+/* 🛒 Items Count & Price */
+.order-item p strong::before {
+  content: "📦 ";
+}
+.order-item p:last-child::before {
+  content: "💰 ";
+  font-weight: bold;
+}
+
+/* 📱 Mobile Responsiveness */
+@media(max-width:1000px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px 8px;
+  }
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .order-item img {
+    inline-size: 40px;
+  }
+}
+
+/* 🛒 Admin Orders */
+.order-admin-container {
+  padding: 20px;
+}
+
+/* 📦 Order Card */
+.order-card {
+  display: flex;
+  gap: 20px;
+  border: 2px solid #ffd6c2;
+  padding: 15px;
+  margin-block-end: 15px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fffdf9, #fff5f0);
+  box-shadow: 0 4px 10px rgba(255, 150, 100, 0.2);
+  transition: 0.3s ease;
+}
+.order-card:hover {
+  transform: translateY(-3px);
+}
+.order-card img {
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 10px;
+  border: 2px solid #ffa07a;
+  background: #fff;
+  padding: 4px;
+}
+
+/* 📋 Order Details */
+.order-details {
+  flex: 1;
+  font-size: 14px;
+}
+.order-details h4::before {
+  content: "📝 ";
+}
+.order-details p::before {
+  content: "👉 ";
+  color: #ff7043;
+}
+
+/* 🚚 Assign Section */
+.assign-section {
+  margin-block-start: 12px;
+}
+.assign-section label::before {
+  content: "🚚 ";
+}
+.assign-section select {
+  inline-size: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid tomato;
+  background: #fff0ed;
+  cursor: pointer;
+  font-weight: 600;
+}
+.assign-section select:hover {
+  background: #ffe2dc;
+}

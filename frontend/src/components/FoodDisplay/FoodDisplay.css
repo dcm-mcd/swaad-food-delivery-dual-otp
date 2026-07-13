@@ -1,0 +1,51 @@
+
+.food-display {
+    margin-block-start: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fffdf7, #f9f9f9);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.food-display h2 {
+    font-size: clamp(24px, 2.5vw, 36px);
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    letter-spacing: 1px;
+    margin-block-end: 20px;
+    position: relative;
+}
+
+.food-display h2::after {
+    content: "";
+    display: block;
+    inline-size: 80px;
+    block-size: 4px;
+    background: linear-gradient(90deg, #ff7a59, #ffb347);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px 30px;
+    margin-block-start: 30px;
+    padding: 10px;
+}
+
+.food-display-list .food-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.food-display-list .food-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+

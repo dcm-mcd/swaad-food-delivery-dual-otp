@@ -1,0 +1,156 @@
+/* 🎉 Home Page Styling - Creative + Fun 🎉 */
+.home-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #fefefe 0%, #f8f8f8 100%);
+  padding-block-end: 4rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌟 Header Section */
+.header {
+  position: relative;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--bg-img) no-repeat center;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+  margin: 20px auto;
+  max-inline-size: 1100px;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  margin-block-end: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.header p {
+  font-size: 1.1rem;
+  max-inline-size: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.header button {
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  border: none;
+  padding: 0.9rem 1.7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.header button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 95, 109, 0.4);
+}
+
+/* 🍔 Explore Menu Section */
+.explore-menu {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.explore-menu h3 {
+  font-size: 2rem;
+  margin-block-end: 1.5rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-item {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 2px dashed #eee;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-6px);
+  background: #fdfdfd;
+}
+
+/* 🍕 Food Display Section */
+.food-display {
+  margin: 3rem auto;
+  padding: 1rem;
+  max-inline-size: 1200px;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.03);
+}
+
+/* 📲 App Download Section */
+.app-download {
+  text-align: center;
+  margin: 4rem auto;
+  padding: 3rem 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #fff;
+}
+
+.app-download h2 {
+  font-size: 2rem;
+  margin-block-end: 1rem;
+}
+
+.app-buttons {
+  margin-block-start: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎨 Emoji Decorations */
+.header::after {
+  content: " 🍽️ 😋 🍛 ";
+  font-size: 2rem;
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-end: 20px;
+  opacity: 0.8;
+}
+
+.explore-menu::before {
+  content: "🍔 🍕 🥗 🍜";
+  display: block;
+  font-size: 1.8rem;
+  margin-block-end: 10px;
+}
+
+.food-display::before {
+  content: "🍩 🍣 🥘 🍤";
+  display: block;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+

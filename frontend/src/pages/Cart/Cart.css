@@ -1,0 +1,155 @@
+.cart {
+    margin: 100px 0px;
+}
+
+.cart hr {
+    block-size: 1px;
+    background-color: #E2E2E2;
+    border: none;
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1vw, 12px);
+}
+
+/* Add emoji headers */
+.cart-items-title div:nth-child(1)::before {
+    content: "📦 ";
+}
+.cart-items-title div:nth-child(2)::before {
+    content: "🍴 ";
+}
+.cart-items-title div:nth-child(3)::before {
+    content: "💲 ";
+}
+.cart-items-title div:nth-child(4)::before {
+    content: "➕ ";
+}
+.cart-items-title div:nth-child(5)::before {
+    content: "➖ ";
+}
+.cart-items-title div:nth-child(6)::before {
+    content: "❌ ";
+}
+
+.cart-items-item {
+    margin: 10px 0px;
+    color: black;
+}
+
+.cart-items-item img {
+    inline-size: 50px;
+    border-radius: 8px;
+}
+
+/* Quantity box styled like a gift 🎁 */
+.cart-items-item div {
+    max-inline-size: 40px;
+    text-align: center;
+    border: 1px solid #EBEBEB;
+    padding: 8px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: #fff8e7;
+}
+
+.cart-items-remove-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+.cart-items-remove-icon::after {
+    content: " 🗑️";
+}
+
+.cart-bottom {
+    margin-block-start: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: max(12vw,20px);
+}
+
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+}
+.cart-total-details::before {
+    content: "🧾 ";
+}
+
+.cart-total hr {
+    margin: 10px 0px;
+}
+
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: #FF4C24;
+    inline-size: max(15vw,200px);
+    padding: 12px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cart-total button::before {
+    content: "🚀 ";
+}
+
+.cart-promocode {
+    flex: 1;
+}
+.cart-promocode p::before {
+    content: "🎟️ ";
+}
+.cart-promocode p {
+    color: #555555;
+}
+.cart-promocode-input {
+    margin-block-start: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+.cart-promocode-input input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-inline-start: 10px;
+}
+.cart-promocode-input input::placeholder {
+    content: "💡 Enter Promo Code";
+}
+.cart-promocode-input button {
+    inline-size: max(10vw,150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.cart-promocode-input button::after {
+    content: " 🎁";
+}
+
+@media(max-width:750px) {
+    .cart-bottom {
+        flex-direction: column-reverse;
+    }
+    .cart-promocode {
+        justify-content: start;
+    }
+}
